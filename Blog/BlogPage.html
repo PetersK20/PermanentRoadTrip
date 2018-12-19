@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="ISO-8859-1">
+	
+	<!-- page description -->
+	<meta name="description"
+	content=""/>
+	
+	<!-- Keywords for search engine -->
+	<meta name="keywords"
+	content=""/>
+	
+	<title>Blog</title>
+	<!-- stops telephone number from being auto styled -->
+	<meta name="format-detection" content="telephone=no">
+	<!-- for bootstraps -->
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<!-- JQuery UI-->
+	<link rel="stylesheet" type=text/css href="../css/jquery-ui.min.css">	
+	<!-- bootstraps -->
+	<link rel="stylesheet" type=text/css href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Add social media icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- JQuery UI-->
+	<script src="../js/jquery-ui.min.js"></script>
+	<!-- bootstraps -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!-- Page stylesheets-->
+	<link rel="stylesheet" type="text/css" href="https://www.permanentroadtrip.com/webcontent/SiteStyleSheet.css">
+	
+	<script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7795050187877001",
+        enable_page_level_ads: true
+      });
+    </script>
+	
+</head>
+<body onload="getDataJson();" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Bolechowicki_Gully_Nature_reserve%2C_Bolechowicka_Gate%2C_Karniowice_village%2C_Krak%C3%B3w_County%2C_Lesser_Poland_Voivodeship%2C_Poland.jpg');">
+	
+	<div class="hidden-lg hidden-md" style="height:70px"></div>
+	<!-- For sm and xs screen size - creates the panel that displays the title of the page, links to other pages, and the logo -->
+	<div id="headerSm" class="hidden-lg hidden-md">
+	
+
+		<div id="headerSm-menuHolder" onclick="changeMenuIcon(this)">
+  			<div id="headerSm-menuBar1"></div>
+  			<div id="headerSm-menuBar2"></div>
+  			<div id="headerSm-menuBar3"></div>
+  			<h4 id="headerSm-menuLabel">Menu</h4>
+		</div>
+		
+		<!-- displays the search icon at the top right of the screen-->
+		<div id="headerSm-searchIconHolder">
+			<span id="headerSm-searchIcon" class="glyphicon glyphicon-search"></span>
+		</div>
+		
+		<div class="input-group input-group-lg" id="headerSm-searchBarHolder">
+  				<input id="headerSm-searchBar" type="text" class="form-control" placeholder="Search Map Locations">
+		</div>
+		<!-- sets the searchBar invisible -->
+		<script>$("#headerSm-searchBarHolder").hide();</script>
+		
+		<div align="center">
+			<div id="headerSm-logo">
+			    <a href="https://www.permanentroadtrip.com">
+    				<img width=80px height=80px class="img img-responsive" src="https://www.theroadtrip.be/wp-content/uploads/2015/12/theRoadtrip.png">
+				</a>
+			</div>
+		</div>
+		
+	</div>
+		
+	<!-- navSm is at the bottom of the page and will be animated to the top of the screen -->
+	<div id="headerSm-navSm" class="hidden-lg hidden-md">
+				
+		<div class="navSm-pageLinkHolder">
+			<h3 class="navSm-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/OurVan/Van.html">Our Van</a></h3>
+		</div>
+		<hr>
+		<div class="navSm-pageLinkHolder">
+			<h3 class="navSm-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/OurRoute/Map.html">Our Route</a></h3>
+		</div>
+		<hr>
+		<div class="navSm-pageLinkHolder">
+			<h3 class="navSm-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/Products/ProductsPage.html">Products</a></h3>
+		</div>
+		<hr>
+		<div class="navSm-pageLinkHolder">
+			<h3 class="navSm-pageLink"><a style="color:#ea8865;" href="#">Blog</a></h3>
+		</div>	
+		<hr>
+		<div class="navSm-pageLinkHolder">
+			<h3 class="navSm-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/About/AboutUs.html">About us</a></h3>
+		</div>	
+	
+	</div>
+	
+	<!-- For lg and md screen size - creates the panel that displays the pageTitle -->
+	<div class="hidden-sm hidden-xs" id="headerLg-titleHolder">
+		<!-- displays the page title -->
+		<div align="center">
+			<span id="headerLg-title">Permanent Road Trip</span>
+		 	<span id="headerLg-socialMediaHolder">
+				<a href="https://www.facebook.com/permanentroadtrip/" class="fa fa-facebook"></a>	
+				<a href="https://www.youtube.com/channel/UCXN6XQ2Kmg9vUGCHmu71FTA" class="fa fa-youtube"></a>		
+				<a href="https://www.instagram.com/permanentroadtrip/" class="fa fa-instagram"></a>
+			</span>
+	
+		</div> 
+		
+	</div>
+	
+	<!-- For lg and md screen size - creates the panel that displays the links to other pages, and the logo -->
+	<div id="headerLg" class="hidden-sm hidden-xs">
+
+	
+		<span id="headerLg-logo">
+		    <a href="https://www.permanentroadtrip.com">
+			    <img width=80px height=80px class="img img-responsive" src="https://www.theroadtrip.be/wp-content/uploads/2015/12/theRoadtrip.png">
+			</a>
+		</span>
+
+		<!-- displays the map icon at the top right of the screen-->
+		<div id="headerLg-searchIconHolder">
+			<span id="headerLg-searchIcon" class="glyphicon glyphicon-search"></span>
+		</div>
+				
+		<div class="input-group input-group-lg" id="headerLg-searchBarHolder">
+  				<input id="headerLg-searchBar" type="text" class="form-control" placeholder="Search Map Locations">
+		</div>
+		<!-- sets the searchBar invisible -->
+		<script>$("#headerLg-searchBarHolder").hide();</script>
+		
+		
+		<!-- adds the page links -->
+		<div align="center">
+			<div id="headerLg-navLg" style="margin-top:5px;">
+	
+				<div class="navLg-pageLinkHolder">
+					<span class="navLg-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/OurVan/Van.html">Our Van</a></span>
+				</div>
+				<div class="navLg-pageLinkHolder">
+					<span class="navLg-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/OurRoute/Map.html">Our Route</a></span>
+				</div>
+				<div class="navLg-pageLinkHolder">
+					<span class="navLg-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/Products/ProductsPage.html">Products</a></span>
+				</div>
+				<div class="navLg-pageLinkHolder" style="border-top:5px solid #ea8865;">
+					<span class="navLg-pageLink"><a style="color:#ea8865;" href="https://www.permanentroadtrip.com/webcontent/Blog/BlogPage.html">Blog</a></span>
+				</div>
+				<div class="navLg-pageLinkHolder">
+					<span class="navLg-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/About/AboutUs.html">About us</a></span>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="headerImg-placeHolder">
+		<h1>Blog</h1>
+	</div>
+	
+<!-- holds all of the content that is unique to this page -->
+<div id="blogContent" class="contentWrapper">
+    
+	<div id="blog-categoryHolderLg" class="hidden-xs hidden-sm">
+		<div class="all blog-categoryLg active" onclick="filterBlog('all');">All</div>
+		<div class="camping blog-categoryLg" onclick="filterBlog('camping');">Camping</div>
+		<div class="winterSports blog-categoryLg" onclick="filterBlog('winterSports');">Winter Sports</div>
+		<div class="mountainBiking blog-categoryLg" onclick="filterBlog('mountainBiking');">Mountain Biking</div>
+		<div class="apparel blog-categoryLg" onclick="filterBlog('apparel');">Apparel</div>
+	</div>
+	
+	<div id="blog-categoryHolderSm" class="hidden-lg hidden-md">
+		<div class="all blog-categorySm active" onclick="filterBlog('all');">All</div>
+		<div class="camping blog-categorySm" onclick="filterBlog('camping');">Camping</div>
+		<div class="winterSports blog-categorySm" onclick="filterBlog('winterSports');">Winter Sports</div>
+		<div class="mountainBiking blog-categorySm" onclick="filterBlog('mountainBiking');">Mountain Biking</div>
+		<div class="apparel blog-categorySm" onclick="filterBlog('apparel');">Apparel</div>
+	</div>
+	
+	<br>
+	<div class="hidden-xs hidden-sm">
+    	<br><br><br><br>
+	</div>
+	
+	<div id="blogPostHolder" class="container-fluid">
+	    <div class="row">
+			<!--<div class="blogPost col-lg-4 col-md-6 col-sm-6 col-xs-12">
+				
+				<div class="blogPost-imgHolder" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Bolechowicki_Gully_Nature_reserve%2C_Bolechowicka_Gate%2C_Karniowice_village%2C_Krak%C3%B3w_County%2C_Lesser_Poland_Voivodeship%2C_Poland.jpg');"></div>
+					
+				<div class="blogPost-textHolder">
+				    <h4><b>Title</b></h4> 
+				    <p>description</p> 
+			 	</div>
+			</div>-->
+		</div>
+		
+	</div>
+	
+	
+	<nav style="text-align:center">
+		<ul id="blogPagination" class="pagination">
+			<!-- 
+		    <li>
+				<a href="#!" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+		    <li><a href="#!">1</a></li>
+		    <li><a href="#!">2</a></li>
+		    <li><a href="#!">3</a></li>
+		    <li><a href="#!">4</a></li>
+		    <li><a href="#!">5</a></li>
+		    <li>
+				<a href="#!" aria-label="Next">
+		        	<span aria-hidden="true">&raquo;</span>
+		      	</a>
+		    </li>
+			-->
+	  	</ul>
+	</nav>
+	
+	
+	<!-- displays the bottom footnote -->
+	<div id="bottomFootnote" class="container-fluid" align="center">
+	<!-- link to the top of the screen -->
+		<br>
+		<div>
+			<div align="left">
+				<br>
+				<br>
+				<h1 id="footer-instagramHeader">60,000+ Followers</h1>
+				<div id="footer-instagram-headerUnderline"></div>
+				<br>
+			</div>
+			
+			<div id="instagramWrapper" class="tabcontent">
+				<div id="instafeed" class="row"></div>
+			</div>
+	
+		</div>
+
+		<div id="woodBg">
+			<div class="row" style="max-width:1200px; margin:0px 20px">
+				<!-- displays the about us info -->
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<h3 class="title"><b>ABOUT US</b></h3>
+					<hr>
+					
+					<h3 class="subTitle"><a href="https://fiftywestbrew.com/">Our Van</a></h3>
+					<h3 class="subTitle"><a href="https://fiftywestbrew.com/">Background</a></h3>
+					<h3 class="subTitle"><a href="https://fiftywestbrew.com/">Favorite Places</a></h3>
+					<h3 class="subTitle"><a href="https://fiftywestbrew.com/">Goal</a></h3>
+	
+				</div>
+				
+				<!-- displays the sponsors -->
+				<div id="newsletterHolder" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<h3 class="title"><b>SPONSORS</b></h3>
+					<hr>
+						
+					<div id="sponsorHolder">
+					    
+					</div>	
+						
+					
+				</div>
+				
+				<!-- displays the social media links -->
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">	
+					<h3 class="title"><b>FOLLOW US</b></h3>
+					<hr>
+					
+					<h3 class="subTitle"><a href="https://www.facebook.com/permanentroadtrip/">Facebook</a></h3>
+					<h3 class="subTitle"><a href="https://www.youtube.com/channel/UCXN6XQ2Kmg9vUGCHmu71FTA">Youtube</a></h3>
+					<h3 class="subTitle"><a href="https://www.instagram.com/permanentroadtrip/">Instagram</a></h3>	
+					
+				</div>	
+			</div>
+			<br>
+			<br>
+			<div style="background:rgb(67,198,97);">
+				<br>
+				<h3 id="copyright">@Permanent Road Trip. All Rights Reserved</h3>
+				<br>
+			</div>
+		</div>
+	</div>
+</div>	
+	
+	<!-- div that covers the whole screen in order to put focus on the options in sm and xs when you hit the menu button -->
+	<div id="focusDiv" class="hidden-lg hidden-md"></div>
+
+	
+	<!-- Navigation JS Files -->
+	<script src="https://www.permanentroadtrip.com/webcontent/SiteJavaScript.js"></script>
+	
+	<!-- BlogInterator Files -->
+	<script src="BlogJS.js"></script>
+	
+	<!-- instafeed.js -->
+	<script src="../js/instafeed.min.js"></script>
+</body>
+</html>

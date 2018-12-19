@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="ISO-8859-1">
+		
+	<!-- page description -->
+	<meta name="description"
+	content="Permanent Road Trip website coming soon!"/>
+	
+	<!-- Keywords for search engine -->
+	<meta name="keywords"
+	content=""/>
+	
+	<meta name="robots" content="index,follow"/> 
+	
+	<title>Permanent Road Trip</title>
+	<!-- stops telephone number from being auto styled -->
+	<meta name="format-detection" content="telephone=no">
+	<!-- for bootstraps -->
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<!-- bootstraps -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Add social media icon library -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<!-- JQuery -->
+	<script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- JQuery UI-->
+	<script src="https://www.permanentroadtrip.com/webcontent/js/jquery-ui.min.js"></script>
+	<!-- bootstraps -->
+	<script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	
+	<!-- Page stylesheets-->
+	<link rel="stylesheet" type="text/css" href="https://www.permanentroadtrip.com/webcontent/Home/HomeStyleSheet.css">
+	<link rel="stylesheet" type="text/css" href="https://www.permanentroadtrip.com/webcontent/SiteStyleSheet.css">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7795050187877001",
+        enable_page_level_ads: true
+      });
+    </script>
+</head>
+<body onload="getDataJson();">
+	
+	<div class="hidden-lg hidden-md" style="height:70px"></div>
+	<!-- For sm and xs screen size - creates the panel that displays the title of the page, links to other pages, and the logo -->
+	<div id="headerSm" class="hidden-lg hidden-md">
+	
+
+		<div id="headerSm-menuHolder" onclick="changeMenuIcon(this)">
+  			<div id="headerSm-menuBar1"></div>
+  			<div id="headerSm-menuBar2"></div>
+  			<div id="headerSm-menuBar3"></div>
+  			<h4 id="headerSm-menuLabel">Menu</h4>
+		</div>
+		
+		<!-- displays the search icon at the top right of the screen-->
+		<div id="headerSm-searchIconHolder">
+			<span id="headerSm-searchIcon" class="glyphicon glyphicon-search"></span>
+		</div>
+		
+		<div class="input-group input-group-lg" id="headerSm-searchBarHolder">
+  				<input id="headerSm-searchBar" type="text" class="form-control" placeholder="Search Map Locations">
+		</div>
+		<!-- sets the searchBar invisible -->
+		<script>$("#headerSm-searchBarHolder").hide();</script>
+		
+		<div align="center">
+			<div id="headerSm-logo">
+			    <a href="https://www.permanentroadtrip.com">
+    				<img width=80px height=80px class="img img-responsive" src="https://www.theroadtrip.be/wp-content/uploads/2015/12/theRoadtrip.png">
+				</a>
+			</div>
+		</div>
+		
+	</div>
+		
+	<!-- navSm is at the bottom of the page and will be animated to the top of the screen -->
+	<div id="headerSm-navSm" class="hidden-lg hidden-md">
+				
+		<div class="navSm-pageLinkHolder">
+			<h3 class="navSm-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/OurVan/Van.html">Our Van</a></h3>
+		</div>
+		<hr>
+		<div class="navSm-pageLinkHolder">
+			<h3 class="navSm-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/OurRoute/Map.html">Our Route</a></h3>
+		</div>
+		<hr>
+		<div class="navSm-pageLinkHolder">
+			<h3 class="navSm-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/Products/ProductsPage.html">Products</a></h3>
+		</div>
+		<hr>
+		<div class="navSm-pageLinkHolder">
+			<h3 class="navSm-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/Blog/BlogPage.html">Blog</a></h3>
+		</div>	
+		<hr>
+		<div class="navSm-pageLinkHolder">
+			<h3 class="navSm-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/About/AboutUs.html">About us</a></h3>
+		</div>	
+	
+	</div>
+	
+	<!-- For lg and md screen size - creates the panel that displays the pageTitle -->
+	<div class="hidden-sm hidden-xs" id="headerLg-titleHolder">
+		<!-- displays the page title -->
+		<div align="center">
+			<span id="headerLg-title">Permanent Road Trip</span>
+		 	<span id="headerLg-socialMediaHolder">
+				<a href="https://www.facebook.com/permanentroadtrip/" class="fa fa-facebook"></a>	
+				<a href="https://www.youtube.com/channel/UCXN6XQ2Kmg9vUGCHmu71FTA" class="fa fa-youtube"></a>		
+                <a href="https://www.instagram.com/permanentroadtrip/" class="fa fa-instagram"></a>	
+			</span>
+	
+		</div> 
+		
+	</div>
+	
+	<!-- For lg and md screen size - creates the panel that displays the links to other pages, and the logo -->
+	<div id="headerLg" class="hidden-sm hidden-xs">
+
+	
+		<span id="headerLg-logo">
+		    <a href="https://www.permanentroadtrip.com">
+    			<img width=80px height=80px class="img img-responsive" src="https://www.theroadtrip.be/wp-content/uploads/2015/12/theRoadtrip.png">
+    		</a>
+		</span>
+
+		<!-- displays the map icon at the top right of the screen-->
+		<div id="headerLg-searchIconHolder">
+			<span id="headerLg-searchIcon" class="glyphicon glyphicon-search"></span>
+		</div>
+				
+		<div class="input-group input-group-lg" id="headerLg-searchBarHolder">
+  				<input id="headerLg-searchBar" type="text" class="form-control" placeholder="Search Map Locations">
+		</div>
+		
+		<!-- sets the searchBar invisible -->
+		<script>$("#headerLg-searchBarHolder").hide();</script>
+		
+		
+		<!-- adds the page links -->
+		<div align="center" id="headerLg-navLgHolder">
+			<div id="headerLg-navLg" style="margin-top:5px;">
+	
+				<div class="navLg-pageLinkHolder">
+					<span class="navLg-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/OurVan/Van.html">Our Van</a></span>
+				</div>
+				<div class="navLg-pageLinkHolder">
+					<span class="navLg-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/OurRoute/Map.html">Our Route</a></span>
+				</div>
+				<div class="navLg-pageLinkHolder">
+					<span class="navLg-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/Products/ProductsPage.html">Products</a></span>
+				</div>
+				<div class="navLg-pageLinkHolder">
+					<span class="navLg-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/Blog/BlogPage.html">Blog</a></span>
+				</div>
+				<div class="navLg-pageLinkHolder">
+					<span class="navLg-pageLink"><a href="https://www.permanentroadtrip.com/webcontent/About/AboutUs.html">About us</a></span>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<!-- holds all of the content that is unique to this page -->
+<div id="homeContent" class="contentWrapper">
+	
+	<!-- header of the homeContent -->
+	<div id="roadTripDiv" class="HC-img container-fluid" style="background-image:url('https://www.permanentroadtrip.com/webcontent/Img/HomePageImgHeader.JPG');">
+		<br><br>
+		<div class="container-fluid" align="center" style="max-width:1000px; text-align:left;">
+			<div class="row">
+				<h1 class="roadTrip-header col-lg-11 col-md-11 col-sm-11 col-xs-12">Permanent Road Trip</h1> 
+			</div>
+			<div class="row">
+				<h3 id="roadTrip-info" class="col-lg-11 col-md-11 col-sm-11 col-xs-12">We went camping last year, and we never went home.</h3>
+			</div>
+			<div class="row">
+
+				<a href="https://www.facebook.com/permanentroadtrip/" class="roadTrip-socialMediaIcon fa fa-facebook"></a>	
+				<a href="https://www.youtube.com/channel/UCXN6XQ2Kmg9vUGCHmu71FTA" class="roadTrip-socialMediaIcon fa fa-youtube"></a>		
+				<!-- use image from the web for the instagram icon -->
+				<a href="https://www.instagram.com/permanentroadtrip/" class="roadTrip-socialMediaIcon fa" style="padding:0px">
+					<img width="100%" height="100%" style="border-radius:50%; background:white;" src="https://www.permanentroadtrip.com/webcontent/Img/instagramIcon.png">
+				</a>
+			</div>
+		</div>	
+	</div>
+	
+	<div class="container-fluid">
+		<br>
+		<br>
+		<div align="center" class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h1 id="aboutSnippet-header">WELCOME TO PERMANENT ROAD TRIP</h1>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-offset-2 col-md-offset-1 col-sm-offset-1 col-lg-2 col-md-3 col-sm-3 col-xs-12">
+				<div id="aboutSnippet-img" style="background-image:url('https://www.permanentroadtrip.com/webcontent/Img/WelcomePicture.jpg');"></div>
+			</div>
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+				<p id="aboutSnippet-description">Information Information Information Information Information Information Information Information Information</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- an excerpt from the OurVan page -->
+	<div id="ourVanDiv" style="height:500px">
+		
+		<div align="left">
+			<br>
+			<br>
+			<h1 id="ourVanHeader">Our Van</h1>
+			<div id="ourVan-headerUnderline"></div>
+			<br>
+		</div>
+		
+		<div id="van-image">
+		    <div class="container-fluid" align="center" style="max-width:1000px; text-align:left;">
+		        <div align="left" style="max-width:650px; text-align:left;">
+		            <h1 class="roadTrip-header">Come take a journey through our van</h1> 
+		        </div>
+		    </div>
+		</div>
+
+	</div>
+
+
+
+	<!-- an excerpt from the OurRoute page -->
+	<div id="ourRouteDiv">
+		
+		<div align="left">
+			<br>
+			<br>
+			<h1 id="ourRouteHeader">Our Route</h1>
+			<div id="ourRoute-headerUnderline"></div>
+			<br>
+		</div>
+		<div id="mapHolder">
+			<div id="map"></div>
+		</div>
+		<!-- The Modal when map marker is clicked -->
+		<div id="map-modal">
+			
+			 <!-- The Close Button -->
+			 <span id="map-modal-close">&times;</span>
+			
+			<!-- Modal Caption (Image Text) -->
+			<div id="map-modal-title"></div>
+			
+			<!-- Carousel -->
+			<!-- Surround everything with a div with the class carousel slide -->
+			<div id="theCarousel" class="carousel slide" data-ride="carousel" style="z-index:2;">
+			 
+				<!-- Define how many slides to put in the carousel -->
+				<ol id="carouselSlideList" class="carousel-indicators">
+				
+					<!--JS will populate this list
+						<li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+						<li data-target="#theCarousel" data-slide-to="1"> </li>
+						<li data-target ="#theCarousel" data-slide-to="2"> </li>
+					-->
+					
+				</ol >
+				 
+				<!-- Define the text to place over the image -->
+				<div id="carouselSlides" class="carousel-inner">
+					<!-- JS will create the slides
+						<div class="item active" >
+							<div class ="slide1"></div>
+							<div class="carousel-caption">
+								<h1>Amazing Backgrounds</h1>
+							</div>
+						</div>
+					 -->
+				</div>
+			
+			
+				<!-- Set the actions to take when the arrows are clicked -->
+				<a class="left carousel-control" href="#theCarousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"> </span>
+				</a>
+				<a class="right carousel-control" href="#theCarousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+				
+			</div>
+			
+			<!-- Modal Caption (Image Text) -->
+			<div id="map-modal-caption"></div>
+		</div>	
+	</div>
+	
+	<!-- an excerpt from the video and photo page -->
+	<div id="blogDiv">
+		<div align="left">
+			<br>
+			<br>
+			<h1 id="blogHeader">Our Blog</h1>
+			<div id="blog-headerUnderline"></div>
+			<br>
+		</div>
+		
+		<div id="blogPostHolder" class="container-fluid" style="max-width:1300px;" >
+	
+		<!--<div class="row">
+				<div class="blogPost col-lg-3 col-md-6 col-sm-6 col-xs-12">
+					
+					<div class="blogPost-imgHolder" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Bolechowicki_Gully_Nature_reserve%2C_Bolechowicka_Gate%2C_Karniowice_village%2C_Krak%C3%B3w_County%2C_Lesser_Poland_Voivodeship%2C_Poland.jpg');"></div>
+					<div class="blogPost-textHolder">
+					    <h4><b>Title</b></h4> 
+					    <p>description</p> 
+				 	</div>
+				</div>
+			</div>-->
+			
+		</div>	
+		
+	</div>
+	
+		<!-- an excerpt from the video and photo page -->
+	<div id="productsDiv">
+
+		<div align="left">
+			<br>
+			<br>
+			<h1 id="productsHeader">Products We Love</h1>
+			<div id="products-headerUnderline"></div>
+			<br>
+		</div>
+		
+		<div id="productsHolder" class="container-fluid" style="max-width:1200px;" >
+	
+		<!--<div class="row">
+				<div class="blogPost col-lg-4 col-md-6 col-sm-6 col-xs-12">
+					
+					<div class="blogPost-imgHolder" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Bolechowicki_Gully_Nature_reserve%2C_Bolechowicka_Gate%2C_Karniowice_village%2C_Krak%C3%B3w_County%2C_Lesser_Poland_Voivodeship%2C_Poland.jpg');"></div>
+						
+					<div class="blogPost-textHolder">
+					    <h4><b>Title</b></h4> 
+					    <p>description</p> 
+				 	</div>
+				</div>
+			</div>-->
+			
+		</div>	
+		
+	</div>
+	
+	<!-- displays the bottom footnote -->
+	<div id="bottomFootnote" class="container-fluid" align="center">
+	<!-- link to the top of the screen -->
+		<br>
+		<div>
+			<div align="left">
+				<br>
+				<br>
+				<br>
+				<h1 id="footer-instagramHeader">60,000+ Followers</h1>
+				<div id="footer-instagram-headerUnderline"></div>
+				<br>
+			</div>
+			
+			<div id="instagramWrapper" class="tabcontent">
+				<div id="instafeed" class="row"></div>
+			</div>
+	
+		</div>
+
+		<div id="woodBg">
+			<div class="row" style="max-width:1200px; margin:0px 20px">
+				<!-- displays the about us info -->
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<h3 class="title"><b>ABOUT US</b></h3>
+					<hr>
+					
+					<h3 class="subTitle"><a href="https://fiftywestbrew.com/">Our Van</a></h3>
+					<h3 class="subTitle"><a href="https://fiftywestbrew.com/">Background</a></h3>
+					<h3 class="subTitle"><a href="https://fiftywestbrew.com/">Favorite Places</a></h3>
+					<h3 class="subTitle"><a href="https://fiftywestbrew.com/">Goal</a></h3>
+	
+				</div>
+				
+				<!-- displays the sponsors -->
+				<div id="newsletterHolder" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<h3 class="title"><b>SPONSORS</b></h3>
+					<hr>
+					<div id="sponsorHolder">
+					    
+					</div>	
+					
+				</div>
+				
+				<!-- displays the social media links -->
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">	
+					<h3 class="title"><b>FOLLOW US</b></h3>
+					<hr>
+					
+					<h3 class="subTitle"><a href="https://www.facebook.com/permanentroadtrip/">Facebook</a></h3>
+					<h3 class="subTitle"><a href="https://www.youtube.com/channel/UCXN6XQ2Kmg9vUGCHmu71FTA">Youtube</a></h3>
+					<h3 class="subTitle"><a href="https://www.instagram.com/permanentroadtrip/">Instagram</a></h3>	
+					
+				</div>	
+			</div>
+			<br>
+			<br>
+			<div style="background:rgb(67,198,97);">
+				<br>
+				<h3 id="copyright">@Permanent Road Trip. All Rights Reserved</h3>
+				<br>
+			</div>
+		</div>
+	</div>
+</div>	
+	
+	<!-- div that covers the whole screen in order to put focus on the options in sm and xs when you hit the menu button -->
+	<div id="focusDiv" class="hidden-lg hidden-md"></div>
+
+	
+	<!-- Navigation JS Files -->
+	<script src="https://www.permanentroadtrip.com/webcontent/SiteJavaScript.js"></script>
+	
+	<!-- HomeInterator Files -->
+	<script type="application/javascript" src="https://www.permanentroadtrip.com/webcontent/Home/HomeJS.js"></script>
+
+		
+	<!-- Google maps -->
+	<script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcKoRGIWI4SN5eQCehFNidWat14qbmRcU&callback=createMap"></script>
+	<!-- instafeed.js -->
+	<script type="application/javascript" src="https://www.permanentroadtrip.com/webcontent/js/instafeed.min.js"></script>
+</body>
+</html>

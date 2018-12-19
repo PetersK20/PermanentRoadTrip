@@ -1,0 +1,1223 @@
+/*NavigationStyleSheet*/
+
+/*overrides default <a> styling*/
+a{
+	color:black;
+	text-decoration:none !important;
+}
+a:focus,a:hover{
+	color:#ea8865;
+}
+
+/*styles social media icons*/
+.fa:hover {
+    opacity: 0.7;
+}
+.fa {
+	border-radius:50%;
+    padding: 20px;
+    font-size: 40px;
+    width: 80px;
+    height:80px;
+    text-align: center;
+    text-decoration: none;
+}
+/*header for the xs and sm screen size*/
+#headerSm{
+	background: rgb(67,198,97);
+	height:70px; 
+	position:fixed;
+    top:0; 
+	z-index:10000;
+	width:100%;
+}
+#headerSm-menuHolder {
+	float:left;
+    display: inline-block;
+    cursor: pointer;
+    position:relative;
+    top:5px;
+    left:30px;
+}
+#headerSm-menuBar1, #headerSm-menuBar2, #headerSm-menuBar3{
+    width: 45px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.2s;
+}
+/* Rotate first bar */
+.changedMenu #headerSm-menuBar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.changedMenu #headerSm-menuBar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.changedMenu #headerSm-menuBar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/*label under the button that triggers the animation of the pageLinks*/
+#headerSm-menuLabel{
+	color:white;
+	margin:0px;
+	text-align:center
+}
+#headerSm-logo{
+	position:relative;
+	top:-3px;
+	display:inline-block;
+	cursor:pointer;
+}
+#headerSm-searchIconHolder{
+	float:right; 
+	position:relative;
+    top:5px;
+    left:-30px;
+	cursor:pointer;
+}
+#headerSm-searchIcon{
+	font-size: 50px;
+	color:white;
+}
+#headerSm-searchBarHolder{
+	 width:65%; 
+	 height:100px;
+	 float:right;
+	 position:relative;
+	 top:10px;
+	 left:-30px;
+	 font-size:10pt;
+	 
+}
+
+/*center of page that states the name of the page*/
+#headerSm-pageTitle{
+	position:relative; 
+	top:20px; 
+	font-size:20pt; 
+	color:white; 
+	letter-spacing:1px;
+}
+@media (max-width: 420px) {
+	#headerSm-pageTitle{
+		top:10px; 
+		font-size:17pt; 
+	}
+}
+
+/*animated div for sm and xs screen size*/
+#headerSm-navSm{
+	font-family: Times, Times New Roman, Georgia, serif;
+	position:fixed;
+	width:300px; 
+	top:70px;
+	left:-320px;
+	background: rgb(67,198,97);
+	z-index:10000;
+	overflow-y: auto;
+	height:100vh;
+	
+}
+
+#headerSm-navSm>hr{
+	margin:0px;
+	border: 0px;
+    height: 1px;
+	background:rgb(67,198,97);
+}
+.navSm-pageLinkHolder{
+	width:100%;
+	margin: 0px;
+	cursor:pointer;
+	padding:0px;
+}
+.navSm-pageLink{
+	cursor:pointer;
+	display:block;
+	font-size:17pt;
+	background:white;
+	margin:0px;
+	width:100%;
+	height:100%;
+}
+.navSm-pageLink>a{
+	padding:5px 5px 5px 37px;
+	display:block;
+}
+
+
+
+
+
+
+/*displays title of the page at the very top of the screen*/
+#headerLg-title{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color:white; 
+	font-size:20pt; 
+	letter-spacing:1px;
+}
+/*label that contains 'Permanent Road Trip' for lg, md an the very top of the screen*/
+#headerLg-titleHolder{
+	background: rgb(67,198,97);
+	height:40px; 
+	margin-bottom:15px;
+}
+#headerLg-socialMediaHolder{
+	float:right;
+	position:absolute;
+	top:-14px;
+	right:30px;
+}
+#headerLg-socialMediaHolder .fa{
+	color:white;
+    font-size: 30px;
+    width: 30px;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/*contains the logo and the navbar for lg and md screen size*/
+#headerLg{
+	height:70px; 
+	position:relative; 
+	top:-15px;
+	z-index:10000;
+	margin:0px;
+	width:100%;
+	background:white;
+
+}
+/*sets navbar fixed on scroll down*/
+.stickyNavbar{
+	position:fixed !important;
+    top:0 !important;
+}
+#headerLg-logo{
+	float:left; 
+	position:relative; 
+	cursor:pointer;
+	left:30px;
+}
+#headerLg-searchIconHolder{
+	float:right; 
+	cursor:pointer;
+	position:relative;
+	top:10px;
+	left:-50px;
+}
+#headerLg-searchIcon{
+	font-size: 50px;
+	color:rgb(67,198,97);
+}
+#headerLg-searchBarHolder{
+	 width:60%; 
+	 height:100px;
+	 float:right;
+	 position:relative;
+	 top:12px;
+	 left:-50px;
+	 
+}
+
+/*navbar for md and lg screen size*/
+#headerLg-navLg{
+	font-family: Times, Times New Roman, Georgia, serif;
+	position:relative;
+	top:-5px;
+	display:inline-block;
+}
+.navLg-pageLink{
+	color:black;
+	cursor:pointer;
+	font-size:22px;
+	letter-spacing:.65;
+	border-right:2px solid rgb(150,150,150);
+	padding:0px 15px 0px 10px;
+	margin:0px 0px 0px 7px;
+
+}
+
+.navLg-pageLinkHolder{
+	display:inline-block; 
+	padding-top:10px;
+	margin-top:12px;
+}
+
+
+
+
+
+
+
+
+/*footerStyleSheet*/
+#bottomFootnote hr{
+	border:2px solid rgb(67,198,97) !important;;
+	background:rgb(67,198,97) !important;;
+}
+#bottomFootnote{
+	padding:0px;
+}
+/*adds woodBg to the bottomFootnote*/
+#woodBg{
+	padding:0px;
+	margin:0px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-image:url('https://www.permanentroadtrip.com/webcontent/Img/WoodBg.jpg');
+}
+.title{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color:white;
+	font-size:30pt;
+	text-align:left;
+}
+.subTitle{
+	text-align:left;
+}
+.subTitle>a{
+	font-family: Times, Times New Roman, Georgia, serif;
+	color:white !important;
+	font-size:22pt;
+	cursor:pointer;
+}
+.subTitle>a:hover{
+	color:white;
+	text-decoration:underline !important;
+}
+#copyright{
+	padding-top:2px;
+	padding-bottom:1px;
+	margin:0px;
+	font-size:17pt;
+	color:white;
+	text-align:center;
+	font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+}
+
+
+/*For the ourVan section*/
+#footer-instagram-headerUnderline{
+	border-bottom:2px solid #ea8865;;
+	width:140px;
+	transition: 0.2s;
+	margin-left:20px;
+}
+.footer-instagram-headerUnderline-active{
+	width:310px !important;
+}
+#footer-instagramHeader{
+	font-family: cursive;
+	display:inline-block;
+	margin-left:20px;
+	transition: 0.2s;
+	white-space: nowrap
+}
+@media only screen and (max-width: 350px){
+    #footer-instagramHeader{
+    	font-size:18pt;
+    	margin-left:10px;
+    }
+    #footer-instagram-headerUnderline{
+	    margin-left:10px;
+	    width:80px;
+    }
+    .footer-instagram-headerUnderline-active{
+    	width:207px !important;
+    }
+}
+#footer-instagramHeader:hover{
+	cursor:pointer;
+	color:#ea8865;;
+}
+
+@media only screen and (min-width: 900px){
+	#footer-instagramHeader{
+		margin-left:100px;
+	}
+	#footer-instagram-headerUnderline{
+		margin-left:100px;
+	}
+	
+}
+#instafeed{
+	margin:5px;
+}
+.instagramImage{
+	padding:5px;
+}
+.instagramImage span{
+	padding-top: 100%;
+	width:100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+
+
+
+
+/*ContentWrapper similar styles*/
+.contentWrapper{
+	position:relative; 
+	background:white;
+}
+/*puts on padding after navbar is put into a fixed position so there is no cut*/
+@media (min-width:  992px) {
+    .padding{
+        margin-top:85px;
+    }
+}
+
+/*image that acts as a header for the page*/
+body{
+	overflow-x:hidden;
+	height:380px;
+	width:100%;
+	background-size:cover;
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*takes up the space to display the image printed onto the body tag*/
+#headerImg-placeHolder{
+	height:380px;
+}
+/*title in the center of the imageHeader*/
+#headerImg-placeHolder>h1{
+	position: absolute;
+   	font-family: 'Pacifico', cursive;
+    left: 50%;
+    top: 33%;
+   	text-align:center;
+    transform: translate(-50%, -100%);
+    color:white;
+    z-index:1;
+    width:100%;
+	font-size: 4.4em;
+}
+@media (min-width:  992px) {
+	#headerImg-placeHolder{
+		height:550px;
+	}
+	body{
+		height:550px;
+	}
+	#headerImg-placeHolder>h1{
+        top: 50%;
+        transform: translate(-50%, -100%);
+    	font-size: 5.4em;
+    }
+}
+@media (max-width:  350px) {
+	#headerImg-placeHolder>h1{
+    	font-size: 2.8em;
+    }
+}
+
+
+/*div is used to display a black layer over the screen to focus the menu animated div when the menu button is clicked*/
+#focusDiv{
+	width:100%; 
+	height:100%; 
+	opacity:0; 
+	background:rgb(0,51,102); 
+	position:fixed; 
+	top:0px; 
+	left:0px; 
+	z-index:-1;
+}
+
+/*pagination links*/
+.pagination a{
+	color:#ea8865 !important;;
+}
+.pagination .active>a{
+	border:1px solid #ea8865 !important;
+	background:#ea8865 !important;
+	color:white !important;
+}
+/*blogPage stylesheet-------------------------------------------------------*/
+#blog-categoryHolderLg{
+	margin-bottom:10px;
+}
+#blog-categoryHolderLg>.active{
+	color:white;
+	background:#ea8865;
+}
+.blog-categoryLg{
+	color:#ea8865;
+	border:1px solid #ea8865;
+    float: left;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 20px;
+    width: 20%;
+    text-align:center;
+}
+.blog-categoryLg:hover{
+	color:white;
+	background:#ea8865;
+}
+.blog-categoryLg:active{
+	color:white;
+    background:#BC6C51;
+}
+#blog-categoryHolderSm{
+	margin-bottom:10px;
+}
+#blog-categoryHolderSm>.active{
+	background:rgb(150,150,150);
+}
+.blog-categorySm{
+	color:white;
+	border-top:1px solid white;
+	background:#ea8865;
+    text-align:center;
+    cursor: pointer;
+    font-size: 20px;
+    padding:5px;
+    text-transform:uppercase;
+}
+.blog-categorySm:hover{
+	background:rgb(150,150,150);
+}
+.blog-categorySm:active{
+	background:rgb(120,120,120);
+}
+
+.blogPost{
+	padding:0px;
+	cursor:pointer;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px; 
+    margin-top:10px;
+    margin-bottom:10px;
+    transition: 0.3s;
+}
+/* On mouse-over, add a deeper shadow */
+.blogPost:hover {
+    box-shadow: 0 10px 18px 5px rgba(0,0,0,0.2);
+}
+
+.blogPost-textHolder {
+    padding: 2px 16px;
+}
+.blogPost-imgHolder{
+	padding-top:90%;
+	width:100%;
+	background-size:cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px 5px 0 0;
+}
+.blogPost-textHolder>h4{
+	text-align:center;
+	font-size:25pt;
+}
+.blogPost-textHolder>p{
+	text-align:center;
+	font-size:18pt;
+}
+
+
+
+
+/*blogPost stylesheet-------------------------------------------------------*/
+/*for the page dedicated just for a single blog post*/
+#blogTitle{
+	text-align:center;
+	color:rgb(67,198,97);
+	font-size:40pt;
+}
+#blogDescription{
+	font-size:20pt;	
+	text-align:left;
+	color:rgb(90,90,90);
+}
+#blogTextHolder hr{
+    background:rgb(67,198,97);
+    border:1px solid rgb(67,198,97);
+}
+
+/*subTitles*/
+#blogTextHolder h1{
+	text-align:left;
+	color:rgb(67,198,97);
+	font-size:30pt;
+}
+/*subParagraphs*/
+#blogTextHolder p{
+	text-align:left;
+	font-size:20pt;	
+	color:rgb(90,90,90);
+}
+/*subImages*/
+.blogSubImage{
+	text-align:center;
+	width:100%;
+}
+#blogInfoWrapper{
+    margin: 0 5%;
+}
+
+
+/*products stylesheet -------------------------------------------------------*/
+#product-categoryHolderLg{
+	margin-bottom:10px;
+}
+#product-categoryHolderLg>.active{
+	color:white;
+	background:#ea8865;
+}
+.product-categoryLg{
+	color:#ea8865;
+	border:1px solid #ea8865;
+    float: left;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 20px;
+    width: 20%;
+    text-align:center;
+}
+.product-categoryLg:hover{
+	color:white;
+	background:#ea8865;
+}
+#product-categoryHolderSm{
+	margin-bottom:10px;
+}
+#product-categoryHolderSm>.active{
+	background:rgb(140,140,140);
+}
+.product-categorySm{
+	color:white;
+	border-top:1px solid white;
+	background:#ea8865;
+    text-align:center;
+    cursor: pointer;
+    font-size: 20px;
+    padding:5px;
+    text-transform:uppercase;
+}
+.product-categorySm:hover{
+	background:rgb(150,150,150);
+}
+
+
+
+.products{
+	text-align:center;
+}
+.products-img{
+	padding-top:80%;
+	width:100%;
+	background-size:contain;
+	background-position: center;
+    background-repeat: no-repeat;
+    margin:0px;
+}
+.products-title{
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 22pt;
+	margin:0px;
+}
+.products-price{
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 13pt;
+	color:rgb(67,198,97);
+}
+@media (max-width: 800px) {
+	.products-title{
+		font-size: 17pt;
+	}
+}
+#ourRouteContent hr{
+    background:black;
+    border:1px solid black;
+}
+
+
+
+/*styling for statePage-----------------------------------------------------*/
+
+#mapTitle{
+	color:rgb(67,198,97);
+}
+
+#stateTextHolder{
+	max-width:800px;
+	
+}
+#stateTextHolder hr{
+    background:rgb(67,198,97);
+    border:1px solid rgb(67,198,97);
+}
+/*subTitles*/
+#stateTextHolder h1{
+	text-align:left;
+	color:rgb(67,198,97);
+	font-size:30pt;
+}
+/*subParagraphs*/
+#stateTextHolder p{
+	text-align:left;
+	font-size:20pt;	
+}
+/*subImages*/
+.stateSubImage{
+	text-align:center;
+    width:100%;
+}
+#stateInfoWrapper{
+    margin:0 5%;
+}
+
+
+
+
+
+
+
+/*Styling for OurRoute*/
+
+/* The Modal */
+#map-modal{
+    display: none;
+    position: fixed;
+    z-index: 100000 !important;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9); 
+}
+/* title of Modal Image*/
+#map-modal-title{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    font-size:30pt;
+    height:auto;
+}
+/* modal Carousel */
+#theCarousel{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  background: rgba(0,0,0,0.8); 
+  max-height: 600px;
+}
+
+
+/*gets rid of bg gradient*/
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+.item{
+	width:100%;
+	height:600px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+}
+
+/* Caption of Modal Image*/
+#map-modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: left;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+/* Add Animation - Zoom in the Modal */
+#map-modal{ 
+    -webkit-animation-name: mapZoom;
+    -webkit-animation-duration: 0.2s;
+    animation-name: mapZoom;
+    animation-duration: 0.2s;
+}
+
+@-webkit-keyframes mapZoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes mapZoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+#map-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#map-modal-close:hover, #map-modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 768px){
+    #map-modal-caption {
+        width: 95%;
+    }
+    #theCarousel{
+    	width:95%;
+    	max-height:450px;
+    }
+    #carouselSlides, #carouselSlideList, .item{
+        max-height:450px;
+    }
+    .multiSelect{
+        margin-bottom:10px;
+        text-align:center;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    #theCarousel, #carouselSlides, #carouselSlideList, .item{
+        max-height:450px;
+    }
+}
+
+/*creates the switch between by location and by state searching*/
+#searchSwitch>span{
+	font-size:20pt;
+	position:relative;
+	top:-15px;
+	margin:0px 10px;
+	white-space:pre;
+}
+@media only screen and (max-width : 500px) {
+    #searchSwitch>span{
+        font-size:15pt;
+	    margin:0px 2px;
+    }
+}
+.switch {
+  	position: relative;
+  	display: inline-block;
+  	width: 60px;
+  	height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  	position: absolute;
+ 	cursor: pointer;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	background-color: #ea8865;
+  	-webkit-transition: .4s;
+  	transition: .4s;
+}
+
+.slider:before {
+  	position: absolute;
+  	content: "";
+  	height: 26px;
+  	width: 26px;
+  	left: 4px;
+  	bottom: 4px;
+  	background-color: white;
+  	-webkit-transition: .4s;
+  	transition: .4s;
+}
+
+input:checked + .slider {
+  	background-color: rgb(67,198,97);
+}
+
+
+input:focus + .slider {
+  	box-shadow: 0 0 1px rgb(67,198,97);
+}
+
+input:checked + .slider:before {
+  	-webkit-transform: translateX(26px);
+  	-ms-transform: translateX(26px);
+  	transform: translateX(26px);
+}
+
+
+
+/*styles byState*/
+#byState{
+	flex: 1;
+	position:relative;
+	float:right;
+	width:100%;
+}
+/*styles byLocation*/
+#byLocation{
+	width:100%;
+	flex: 2;
+	position:relative;
+	display:none;
+	opacity:0;
+}
+
+/*For byState and byLocation*/
+.mapLocationHolder{
+	border:5px solid white;
+	overflow:hidden;
+	margin:0px;
+  	padding:0px;
+}
+.mapLocation{
+  	margin:0px;
+  	padding:0px;
+  	overflow:hidden;
+}
+
+.mapLocation-img{
+  	margin:0px;
+  	padding:0px;
+  	padding-top:75%;
+	width:100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.state{  
+	cursor:pointer;
+  	-webkit-animation-name: zoomOut;
+    -webkit-animation-duration: 400ms;
+    -webkit-animation-fill-mode: forwards;  
+
+    -o-animation-name: zoomOut;
+    -o-animation-duration: 400ms;
+ 	-o-animation-fill-mode: forwards; 
+ 	
+    -moz-animation-name: zoomOut;
+    -moz-animation-duration: 400ms;
+ 	-moz-animation-fill-mode: forwards; 
+ 	
+    -ms-animation-name: zoomOut;
+    -ms-animation-duration: 400ms;
+	-ms-animation-fill-mode: forwards; 
+    
+    animation-name: zoomOut;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;  
+}
+.state:hover{
+	-webkit-animation-name: zoom;
+    -webkit-animation-duration: 400ms;
+    -webkit-animation-fill-mode: forwards;  
+
+    -o-animation-name: zoom;
+    -o-animation-duration: 400ms;
+ 	-o-animation-fill-mode: forwards; 
+ 	
+    -moz-animation-name: zoom;
+    -moz-animation-duration: 400ms;
+ 	-moz-animation-fill-mode: forwards; 
+ 	
+    -ms-animation-name: zoom;
+    -ms-animation-duration: 400ms;
+	-ms-animation-fill-mode: forwards; 
+    
+    animation-name: zoom;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;  
+
+}
+@-ms-keyframes zoom{    from { -ms-transform:scale(1,1);} to { -ms-transform:scale(1.3,1.3);}    }
+@-o-keyframes zoom{    from { -o-transform:scale(1,1);} to { -o-transform:scale(1.3,1.3);}    }
+@-moz-keyframes zoom{    from { -moz-transform:scale(1,1);} to { -moz-transform:scale(1.3,1.3);}    }
+@-webkit-keyframes zoom{    from { -webkit-transform:scale(1,1);} to { -webkit-transform:scale(1.3,1.3);}    }
+@-keyframes-keyframes zoom{    from { transform:scale(1,1);} to {transform:scale(1.3,1.3);}    }
+
+@-ms-keyframes zoomOut{    from { -ms-transform:scale(1.3,1.3);} to { -ms-transform:scale(1,1);}    }
+@-o-keyframes zoomOut{    from { -o-transform:scale(1.3,1.3);} to { -o-transform:scale(1,1);}    }
+@-moz-keyframes zoomOut{    from { -moz-transform:scale(1.3,1.3);} to { -moz-transform:scale(1,1);}    }
+@-webkit-keyframes zoomOut{    from { -webkit-transform:scale(1.3,1.3);} to { -webkit-transform:scale(1,1);}    }
+@-keyframes-keyframes zoomOut{    from { transform:scale(1.3,1.3);} to {transform:scale(1,1);}    }
+
+.mapLocation-centeredImgText {
+   	position: absolute;
+   	font-family: 'Pacifico', cursive;
+    top: 50%;
+    left: 50%;
+   	text-align:center;
+    transform: translate(-50%, -50%);
+    color:white;
+    z-index:1;
+    width:100%;
+
+}
+/*sets the black background of the text*/
+.mapLocation-centeredImgTextBg{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5;
+    right: 0;
+	background:black;
+    opacity:.5;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/*just for location not state*/
+
+/*holds the buttons that show on hover*/
+.mapLocation-buttonHolder{
+	opacity:0;
+	position: absolute;
+    top: 100%;
+    left: 50%;
+   	text-align:center;
+    transform: translate(-50%, -50%);
+    color:white;
+    z-index:1;
+    width:100%;
+    white-space: nowrap
+}
+.mapLocation-buttonHolder>Button{
+	margin:2px;
+	background:white;
+	color:#ea8865;
+	font-size:13pt;
+}
+.mapLocation-buttonHolder>Button:hover{
+	background:#ea8865;
+	color:white;
+}
+/*applies tint*/
+.location:hover:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(206,58,58, 0.9);
+  -moz-transition: background .3s linear;
+  -webkit-transition: background .3s linear;
+  -o-transition: background .3s linear;
+  transition: background .3s linear;
+}
+
+
+.btn-primary{
+	font-family: Verdana, Arial, Helvetica, sans-serif !important;
+	background:rgb(67,198,97) !important;
+	border:1px solid rgb(67,198,97) !important;
+}
+.btn-primary:hover{
+	background:#ea8865 !important;
+	border:1px solid #ea8865 !important;
+}
+/*multiSelect*/
+.active a{
+	background:rgb(67,198,97) !important;
+}
+
+
+
+
+
+/*homePage------------------------------------------------------------------*/
+/*for the snippet that explain a little about permanent road trip*/
+#aboutSnippet-header{
+	font-size:30pt; 
+	font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif; 
+}
+#aboutSnippet-description{
+	font-size:20pt;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+}
+#aboutSnippet-img{
+	border-radius:50%;
+	width:200px;
+	height:200px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+@media (max-width: 762px) {
+	#aboutSnippet-description{
+		text-align:center;
+	}
+	#aboutSnippet-img{
+		margin:auto;
+	}
+	
+}
+
+
+
+
+/*OurVan----------------------------------------------------------------------*/
+#vanSubNav{
+    display:block;
+    z-index:1000;
+    width:100%;
+    background:white;
+    padding:0;
+}
+#vanSubNav-linkHolder .navbar{
+    max-width:1000px;
+    background:white;
+    padding:0;
+    margin-top:0;
+    margin-bottom:0;
+}
+#vanSubNav-linkHolder .navbar-collapse{
+    position:absolute;
+    background:white;
+    z-index:10000;
+    width:100%;
+    text-align:left;
+    padding-left:30px;
+}
+#vanSubNav-linkHolder>ul{
+    text-align:center;
+    list-style: none;
+}
+#vanSubNav-linkHolder li>h2{
+    cursor:pointer;
+    font-family: Times, Times New Roman, Georgia, serif;
+    padding:0 5px 0 5px;
+    font-size:23px;
+	letter-spacing:.65;
+	line-height: 14px;
+}
+#vanInfoHolder{
+    max-width:1200px;
+}
+#vanInfoHolder h1{
+	text-align:left;
+	color:rgb(67,198,97);
+	font-size:30pt;
+}
+/*subParagraphs*/
+#vanInfoHolder p{
+	text-align:left;
+	font-size:20pt;	
+}
+#vanContent a:visited{
+    color:black;
+}
+#vanContent a:hover{
+    color:#ea8865;
+}
+#vanContent hr{
+    border:1px solid rgb(67,198,97);
+	background:rgb(67,198,97);
+}
+.stickySubNavbar{
+    position:fixed !important;
+    top:70px !important;
+}
+
+
+
+/*About Us styling -----------------------------------------------------------*/
+#aboutContent{
+    background:rgb(230,230,230);
+}
+#aboutTitle{
+    background:rgb(250,250,250);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding:5px;
+    margin-bottom:20px;
+}
+#aboutTitle>h3{
+    color:rgb(50,50,50);
+}
+#aboutWrapper{
+    background:rgb(250,250,250);;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height:500px;
+    margin-left:20px;
+}
+#aboutNav{
+    background:rgb(250,250,250);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align:left;
+    padding:0;
+    margin:0;
+}
+#aboutNav h2{
+    padding:10px 10px 10px 20px;
+    cursor:pointer;
+    width:100%;
+    height:100%;
+}
+#aboutNav h2:hover{
+    cursor:pointer;
+    color:#ea8865;
+}
+#aboutNav .active{
+    color:#ea8865;
+}
+#aboutMargin{
+    padding-left:30px;
+}
+#infoHolder{
+    margin: 10px 2%;
+    text-align:left;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    font-size: 17pt;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(90,90,90);
+    text-indent:20px;
+}
+@media (max-width: 992px) {
+    #aboutMargin{
+        padding-left:0;
+        margin:20px 0 0 0;
+    }
+    #aboutWrapper{
+        margin:20px 0 0 0;
+    }
+}
+#contentHolder{
+    max-width:1000px;
+    margin: 0 2%;
+}
+

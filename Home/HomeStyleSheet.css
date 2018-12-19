@@ -1,0 +1,582 @@
+
+/*for the first element div in the homeContent div*/
+
+#homeContent{
+    top:-15px;
+}
+/*background images in the homeContent div*/
+.HC-img{
+	height:600px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin:0px;
+	padding:0px;
+}
+.HC-accordion{
+	height:410px;
+	margin:0px;
+	padding:0px;
+}
+
+
+
+
+
+/*header for the header image in the homeContent div*/
+.roadTrip-header{ 
+	color:white; 
+	font-size:48pt; 
+	margin-left:20px; 
+	margin-top:40px;
+	text-shadow: 2px 2px 2px #000000;
+	font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothi,Arial,sans-serif; 
+}
+/*info for the background images in the homeContent div that is under the HC-header*/
+#roadTrip-info{
+	color:white; 
+	text-shadow: 2px 2px 2px #000000; 
+	margin:20px;
+	font-size:28pt;
+	font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothi,Arial,sans-serif; 
+}
+/*social media icon styling*/
+.roadTrip-socialMediaIcon{
+	margin:10px;
+	border-radius:50%;
+}
+
+/* Set a specific color for each brand */
+#homeContent .fa-facebook {
+	margin-left:20px;
+    background: #3B5998;
+    color: white;
+}
+/* overides hover effect from the font awesome library  */
+#homeContent .fa-facebook:hover {
+    background: #3B5998;
+    color: white;
+}
+#homeContent .fa-youtube {
+    background: #FF0000;
+    color: white;
+}
+#homeContent .fa-youtube:hover{
+    background: #FF0000;
+    color: white;
+}
+
+/*animation of the socialMedia icons are at the bottom of the file*/
+@media (min-width: 650px) {
+	.roadTrip-socialMediaIcon{
+		margin:50px !important;
+		webkit-transform: scale(1.5,1.5); 
+		-moz-transform: scale(1.5,1.5); 
+		-ms-transform: scale(1.5,1.5); 
+		-o-transform: scale(1.5,1.5); 
+		transform: scale(1.5,1.5); 
+	}
+	.roadTrip-header{
+		margin-top:60px;
+		font-size:58pt;
+	}
+	#roadTrip-info{
+		font-size:30pt;
+	}
+
+}
+@media (max-width: 400px) {
+    .roadTrip-header{ 
+    	font-size:40pt; 
+    	margin-left:5px; 
+    	margin-top:35px;
+    }
+    /*info for the background images in the homeContent div that is under the HC-header*/
+    #roadTrip-info{
+    	margin-left:5px;
+    	font-size:30pt
+    }
+    /*social media icon styling*/
+    .roadTrip-socialMediaIcon{
+    	margin-left:1px;
+    }
+
+}
+
+
+/*for the snippet that explain a little about permanent road trip*/
+#aboutSnippet-header{
+	font-size:30pt; 
+	font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif; 
+}
+#aboutSnippet-description{
+	font-size:20pt;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+}
+#aboutSnippet-img{
+	border-radius:50%;
+	width:200px;
+	height:200px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+@media (max-width: 762px) {
+	#aboutSnippet-description{
+		text-align:center;
+	}
+	#aboutSnippet-img{
+		margin:auto;
+	}
+	
+}
+
+
+/*For the ourVan section*/
+#ourVan-headerUnderline{
+	border-bottom:2px solid #ea8865;
+	width:65px;
+	transition: 0.2s;
+	margin-left:10px;
+}
+.ourVan-headerUnderline-active{
+	width:144px !important;
+}
+#ourVanHeader{
+	font-family: cursive;
+	display:inline-block;
+	margin-left:10px;
+	transition: 0.2s;
+}
+@media only screen and (max-width: 350px){
+    #ourVanHeader{
+    	font-size:18pt;
+    	margin-left:10px;
+    }
+    #ourVan-headerUnderline{
+	    margin-left:10px;
+	    width:40px;
+    }
+    .ourVan-headerUnderline-active{
+    	width:93px !important;
+    }
+}
+#ourVanHeader:hover{
+	cursor:pointer;
+	color:#ea8865;
+}
+
+@media only screen and (min-width: 900px){
+	#ourVanHeader{
+		margin-left:100px;
+	}
+	#ourVan-headerUnderline{
+		margin-left:100px;
+	}
+}
+
+#van-image{
+    background-image:url('https://scontent.fluk1-1.fna.fbcdn.net/v/t1.0-9/45276538_2249395335305829_3288678581923741696_n.jpg?_nc_cat=109&_nc_ht=scontent.fluk1-1.fna&oh=31cf7939608dfe0fc5d432393553c9db&oe=5C778A17');
+    background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height:400px;
+	width:96%;
+	margin-left:2%;
+	margin-right:2%;
+}
+
+@media only screen and (min-width: 900px){
+    #van-image{
+        height:400px;
+        width:90%;
+        margin-left:5%;
+	    margin-right:5%;
+    }
+}
+
+
+
+/*for the google map section*/
+#ourRoute-headerUnderline{
+	border-bottom:2px solid #ea8865;;;
+	width:70px;
+	transition: 0.2s;
+	margin-left:10px;
+}
+.ourRoute-headerUnderline-active{
+	width:170px !important;
+}
+#ourRouteHeader{
+	font-family: cursive;
+	display:inline-block;
+	margin-left:10px;
+	transition: 0.2s;
+}
+@media only screen and (max-width: 350px){
+    #ourRouteHeader{
+    	font-size:18pt;
+    	margin-left:10px;
+    }
+    #ourRoute-headerUnderline{
+	    margin-left:10px;
+	    width:50px;
+    }
+    .ourRoute-headerUnderline-active{
+    	width:115px !important;
+    }
+}
+#ourRouteHeader:hover{
+	cursor:pointer;
+	color:#ea8865;;
+}
+
+#mapHolder{
+	margin-left:2%;
+	margin-right:2%;
+}
+	
+@media only screen and (min-width: 900px){
+  
+    #mapHolder{
+    	margin-left:5%;
+	    margin-right:5%;
+    }
+    #map{
+        height:500px;
+    }
+
+	#ourRouteHeader{
+		margin-left:100px;
+	}
+	#ourRoute-headerUnderline{
+		margin-left:100px;
+	}
+}
+#map{
+	width:100%;
+	height:400px;
+}
+/* The Modal */
+#map-modal{
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9); 
+}
+/* title of Modal Image*/
+#map-modal-title{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    font-size:30pt;
+}
+/* modal Carousel */
+#theCarousel{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+/*gets rid of bg gradient*/
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+.item{
+	width:100%;
+	height:600px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/* Caption of Modal Image*/
+#map-modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: left;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+/* Add Animation - Zoom in the Modal */
+#map-modal{ 
+    -webkit-animation-name: mapZoom;
+    -webkit-animation-duration: 0.2s;
+    animation-name: mapZoom;
+    animation-duration: 0.2s;
+}
+
+@-webkit-keyframes mapZoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes mapZoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+#map-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#map-modal-close:hover, #map-modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    #map-modal-caption {
+        width: 100%;
+    }
+    #theCarousel{
+    	width:100%;
+    }
+}
+
+
+/*for blog section*/
+#blog-headerUnderline{
+	border-bottom:2px solid #ea8865;
+	width:60px;
+	transition: 0.2s;
+	margin-left:10px;
+}
+.blog-headerUnderline-active{
+	width:150px !important;
+}
+#blogHeader{
+	font-family: cursive;
+	display:inline-block;
+	margin-left:10px;
+	transition: 0.2s;
+}
+@media only screen and (max-width: 350px){
+    #blogHeader{
+    	font-size:18pt;
+    	margin-left:10px;
+    }
+    #blog-headerUnderline{
+	    margin-left:10px;
+	    width:44px;
+    }
+    .blog-headerUnderline-active{
+    	width:100px !important;
+    }
+}
+#blogHeader:hover{
+	cursor:pointer;
+	color:#ea8865;;
+}
+@media only screen and (min-width: 900px){
+	#blog-headerUnderline{
+		margin-left:100px;
+	}
+	#blogHeader{
+		margin-left:100px;
+	}
+}
+
+.blogPost{
+	padding:0px;
+	cursor:pointer;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+    margin-top:10px;
+    margin-bottom:10px;
+}
+/* On mouse-over, add a deeper shadow */
+.blogPost:hover {
+    box-shadow: 0 10px 18px 5px rgba(0,0,0,0.2);
+}
+
+.blogPost-textHolder {
+    padding: 2px 16px;
+}
+.blogPost-imgHolder{
+	padding-top:90%;
+	width:100%;
+	background-size:cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px 5px 0 0;
+}
+.blogPost-textHolder>h4{
+	text-align:center;
+	font-size:25pt;
+}
+.blogPost-textHolder>p{
+	text-align:center;
+	font-size:18pt;
+}
+
+
+/*Products We love section*/
+#products-headerUnderline{
+	border-bottom:2px solid #ea8865;;
+	width:140px;
+	transition: 0.2s;
+	margin-left:10px;
+}
+.products-headerUnderline-active{
+	width:300px !important;
+}
+#productsHeader{
+	font-family: cursive;
+	display:inline-block;
+	margin-left:10px;
+	transition: 0.2s;
+}
+@media only screen and (max-width: 350px){
+    #productsHeader{
+    	font-size:18pt;
+    	margin-left:10px;
+    }
+    #products-headerUnderline{
+	    margin-left:10px;
+	    width:80px;
+    }
+    .products-headerUnderline-active{
+    	width:207px !important;
+    }
+}
+#productsHeader:hover{
+	cursor:pointer;
+	color:#ea8865;;
+}
+@media only screen and (min-width: 900px){
+	#products-headerUnderline{
+		margin-left:100px;
+	}
+	#productsHeader{
+		margin-left:100px;
+	}
+}
+
+.products{
+	text-align:center;
+}
+.products-img{
+	padding-top:80%;
+	width:100%;
+	background-size:cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    margin:0px;
+}
+.products-title{
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 22pt;
+	margin:0px;
+}
+.products-price{
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 13pt;
+	color:rgb(67,198,97);
+}
+@media (max-width: 800px) {
+	.products-title{
+		font-size: 17pt;
+	}
+}
+
+
+	
+/*animates the socialMediaIcons*/
+.roadTrip-socialMediaIcon:hover {
+
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 1000ms;
+
+    -moz-animation-name: spin;
+    -moz-animation-duration: 1000ms;
+ 
+    -ms-animation-name: spin;
+    -ms-animation-duration: 1000ms;
+
+ 	-o-animation-name: spin;
+    -o-animation-duration: 1000ms;
+
+    
+    animation-name: spin;
+    animation-duration: 1000ms;
+}
+
+@-webkit-keyframes mapZoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+/*one for lg, md and another for sm, xs*/
+@media (min-width: 800px){
+    
+	@-ms-keyframes spin{
+	    from {-ms-transform: rotate(0deg) scale(1.5,1.5);}
+	    to {-ms-transform: rotate(360deg) scale(1.5,1.5); }
+    }
+	@-o-keyframes spin {
+	    from { -o-transform: rotate(0deg) scale(1.5,1.5); }
+	    to { -o-transform: rotate(360deg) scale(1.5,1.5); }
+	}
+	@-moz-keyframes spin {
+	    from { -moz-transform: rotate(0deg) scale(1.5,1.5); }
+	    to { -moz-transform: rotate(360deg) scale(1.5,1.5); }
+	}
+	@-webkit-keyframes spin{
+	    from { -webkit-transform: rotate(0deg) scale(1.5,1.5); }
+	    to { -webkit-transform: rotate(360deg) scale(1.5,1.5); }
+	}
+	@keyframes spin{
+	    from {transform:rotate(0deg) scale(1.5,1.5);}
+	    to {transform:rotate(360deg) scale(1.5,1.5);}
+	}
+}
+
+
+@media (max-width: 800px) {
+	@-ms-keyframes spin {
+	    from { -ms-transform: rotate(0deg);}
+	    to { -ms-transform: rotate(360deg); }
+	}
+	@-o-keyframes spin {
+	    from { -o-transform: rotate(0deg); }
+	    to { -o-transform: rotate(360deg); }
+	}
+	@-moz-keyframes spin {
+	    from { -moz-transform: rotate(0deg); }
+	    to { -moz-transform: rotate(360deg); }
+	}
+	@-webkit-keyframes spin{
+	    from { -webkit-transform: rotate(0deg); }
+	    to { -webkit-transform: rotate(360deg); }
+	}
+	@keyframes spin{
+	    from {transform:rotate(0deg);}
+	    to {transform:rotate(360deg);}
+	}
+}
